@@ -9,7 +9,7 @@ RSpec.feature "User views song index" do
 
     visit artist_path(artist)
     click_on "View Songs"
-save_and_open_page
+
     expect(current_path).to eq(artist_songs_path(artist))
     expect(page).to have_link last_song.title, href: song_path(last_song.id)
   end
