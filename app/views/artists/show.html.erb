@@ -4,3 +4,4 @@
   <p><%= link_to "Edit", edit_artist_path(@artist) %></p>
   <p><%= link_to "Delete", artist_path(@artist), method: :delete, data: {confirm: "Really delete #{@artist.name}?"} %></p>
   <p><%= link_to "New Song", new_artist_song_path(@artist) %></p>
+  <p><%= link_to "View Songs", artist_songs_path(@artist) %></p>
