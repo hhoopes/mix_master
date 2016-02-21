@@ -1,6 +1,6 @@
 <h1><%= @artist.name  %></h1>
 <%= image_tag @artist.image_path %>
-<p>
-  <%= link_to "Delete", artist_path(@artist), method: :delete, data: {confirm: "Really delete #{@artist.name}?"} %>
-  <%= link_to "Edit", edit_artist_path(@artist) %>
-</p>
+
+  <p><%= link_to "Edit", edit_artist_path(@artist) %></p>
+  <p><%= link_to "Delete", artist_path(@artist), method: :delete, data: {confirm: "Really delete #{@artist.name}?"} %></p>
+  <p><%= link_to "New Song", new_artist_song_path(@artist) %></p>
