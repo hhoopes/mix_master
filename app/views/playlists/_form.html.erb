@@ -3,8 +3,8 @@
 
   <% Song.all.each do |song|  %>
     <div >
-      <%= check_box_tag(:song_ids, song.id, false, :name => "playlist[song_ids][]", id: "song-#{song.id}") %>
-      <%= link_to song.title, song_path(song) %>
+      <%= check_box_tag(:song_ids, song.id, @playlist.songs.include?(song), :name => "playlist[song_ids][]", id: "song-#{song.id}") %>
+      <%= render partial: 'shared/link_song', locals: {target: song} %>
     </div>
     <% end %>
 

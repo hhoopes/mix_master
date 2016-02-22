@@ -1,6 +1,6 @@
 <h1>All Songs for <%= @artist.name %></h1>
 <ul>
   <% @songs.alphabetized.each do |song| %>
-    <li><%= link_to song.title, song_path(song) %></li>
+    <li><%= render partial: "shared/link_song", locals: {target: song} %></li>
   <% end %>
 </ul>
